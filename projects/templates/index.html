@@ -26,7 +26,8 @@
     {% for winner in winners %}
     <div class="col-md-4">
       <div class="card" style="width: 40.2rem; padding:0%">
-        <img class="card-img-top img-responsive" src="{{winner.landing_page.url}}" alt="Card image cap" responsive style="padding: 10%">
+        <a href="/site/{{winner.id}}"><img class="card-img-top img-responsive" src="{{winner.landing_page.url}}" alt="Card image cap" responsive style="padding: 10%"></a>
+        <!-- <img class="card-img-top img-responsive" src="{{winner.landing_page.url}}" alt="Card image cap" responsive style="padding: 10%"> -->
         <div class="card-body">
           <a href="/site/{{winner.id}}" style="color:black;text-decoration:none;">
             <h5 class="card-title" style="line-height:28px;">Website Name: {{winner.title}}</h5>
