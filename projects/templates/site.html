@@ -86,7 +86,8 @@
 <h3 class="text-center">No votes made for this site yet</h3>
 <hr>
 {% endif %}
-
+<div class="row">
+  <div class="col-md-6">
 <form action="/site/{{project.id}}" method="post" enctype="multipart/form-data" id="votes-form">
   {%csrf_token%}
 
@@ -95,7 +96,11 @@
     <input id="votes-input" type="submit" class="btn btn-success btn-lg" value="Post">
   </div>
 </form>
+</div>
+<div class="col-md-6">
 
+</div>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"> </script>
