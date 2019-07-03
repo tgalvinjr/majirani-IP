@@ -66,6 +66,7 @@ def new_project(request):
             project.country = profile.country
 
             project.save()
+        return redirect('Index')
     else:
         form = ProjectForm()
 
