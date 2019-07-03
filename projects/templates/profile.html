@@ -28,12 +28,12 @@
 
 <div class="container headers">
   <h4 style="float:left;"><span class="bold">Projects</span> Your projects</h4>
-  <!-- <h4 style="float:right"><span><span class="bold">Mobile Excellence</span>  Recognized by Google</span></h4> -->
+  
 </div>
 <div class="pages">
   <div class="row">
     {% for project in projects %}
-    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+    <div class="col-md-4">
       <div class="card" style="width: 40.2rem;">
         <img class="card-img-top img-responsive" src="{{project.landing_page.url}}" alt="Card image cap" responsive>
         <div class="card-body">
