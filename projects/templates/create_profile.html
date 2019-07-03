@@ -11,30 +11,33 @@
   <title>New Post</title>
   {{form.media}}
 
-{% block styles %} {% bootstrap_css %}
+  {% block styles %} {% bootstrap_css %}
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
-{% endblock %}
+  {% endblock %}
 
 </head>
 
 <body>
+  <p class="text-center" style="color: crimson; font-size:250%; ">Welcome to Awards. Please update your profile to
+    proceed to the Site</p>
+  <div class="container">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form action="{% url 'create-profile'%}" method="post" enctype="multipart/form-data">
 
-  <div class="panel panel-default">
-    <div class="panel-body">
-      <form action="{% url 'create-profile'%}" method="post"  enctype="multipart/form-data">
-
-        {% csrf_token%}
-        {% bootstrap_form form %}
-        <div class="form-group text-center">
-          <input type="submit" class="btn btn-primary sign-up-button" value="Share">
-        </div>
-        <input type="hidden" name="next" value="{{next}}">
-      </form>
+          {% csrf_token%}
+          {% bootstrap_form form %}
+          <div class="form-group text-center">
+            <input type="submit" class="btn btn-primary sign-up-button" value="Create Profile">
+          </div>
+          <input type="hidden" name="next" value="{{next}}">
+        </form>
+      </div>
     </div>
   </div>
 
-   {% block scripts %}
+  {% block scripts %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   {% bootstrap_javascript %} {% endblock %}
 
