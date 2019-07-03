@@ -20,7 +20,7 @@ from rest_framework.views import APIView
 # Create your views here.
 def index(request):
     date = dt.date.today()
-    winners=Project.objects.all()[:4]
+    winners=Project.objects.all()[:100]
     # caraousel = Project.objects.order_by('-overall_score')[0]
     nominees=Project.objects.all()[4:8]
     directories=Project.objects.all()[8:11]
