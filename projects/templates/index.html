@@ -17,14 +17,14 @@
 
 
 
-<div class="container headers">
+<div class="container">
   <h4 style="float:left;"><span class="bold">Uploaded Websites</h4>
 
 </div>
-<div class="pages">
+<div class="container-fluid">
   <div class="row">
     {% for winner in winners %}
-    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+    <div class="col-md-4">
       <div class="card" style="width: 40.2rem; padding:0%">
         <img class="card-img-top img-responsive" src="{{winner.landing_page.url}}" alt="Card image cap" responsive style="padding: 10%">
         <div class="card-body">
