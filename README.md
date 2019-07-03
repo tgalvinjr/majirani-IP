@@ -1,14 +1,15 @@
-# Instagram Clone
+# AWARDS
 
 ## Description
-####  This is an instagram clone  for the popular photo app,Instagram.
+####  The application allows a user to post a project s/he has created and get it reviewed by peers
 
 ## Features (The user can:)
-* Sign in to the application to start using.
-* Upload my pictures to the application.
-* See my profile with all my pictures.
-* Follow other users and see their pictures on my timeline.
-* Like a picture and leave a comment on it.
+* View posted projects and their details
+* Post a project to be rated/reviewed
+* Rate/ review other users' projects
+* Search for projects 
+* View projects overall score
+* View their profile page
 
 ## Setup/Installation Requirements
 ### Prerequisites
@@ -22,7 +23,7 @@
 ### Cloning/Installing and running
 * Clone the application using git clone(this copies the app onto your device). In terminal:
 
-          $ git clone https://github.com/tgalvinjr/instagram-IP.git
+          $ git clone https://github.com/tgalvinjr/awards-IP.git
           $ cd gallery
 
 * Creating the virtual environment
@@ -53,10 +54,17 @@
 * Python 3.6
 * Django 1.11
 * Bootstrap
-
+## BDD
+| Behavior | Input | Output |
+|-------|:--------:|--------|
+|Access Website | Username & password | redirected to homepage |
+| Signing up | Submitting required fields | account is created and user is redirected to login page |
+| Accessing homepage | homepage URL/clicking on HOME | User sees all uploaded websites |
+| Update profile | clicking profile on navbar | redirected to profile page where user can update profile |
+| view a particular website details | click on the website title | redirected to the a page containing details and ratings of the site|
 
 ## Github Pages
-    The UI templates can be tested on [Heroku](https://alvogram.herokuapp.com/home)
+    The UI templates can be tested on [Heroku](https://alvoawards.herokuapp.com/home)
 
 ## Known Bugs
 None at the moment
@@ -66,7 +74,7 @@ Alvin Michoma
 [Github](https://github.com/tgalvinjr)
 
 ## License and Copyright information
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/tgalvinjr/instagram-IP/blob/master/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/tgalvinjr/awards-IP/blob/master/LICENSE) file for details
 
 ## Acknowledgments
 - Hat tip to anyone who unblocked me in class
