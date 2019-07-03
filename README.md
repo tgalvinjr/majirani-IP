@@ -3,7 +3,7 @@
 ## Description
 ####  The application allows a user to post a project s/he has created and get it reviewed by peers
 
-## Features (The user can:)
+## Features/The user can:
 * View posted projects and their details
 * Post a project to be rated/reviewed
 * Rate/ review other users' projects
