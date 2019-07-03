@@ -102,7 +102,7 @@ class Profile(models.Model):
         return self.name
 
 class Rating(models.Model):
-    design = models.IntegerField(blank=True,default=0)
+    design = models.IntegerField(blank=True,default=0,ma)
     usability = models.IntegerField(blank=True,default=0)
     creativity = models.IntegerField(blank=True,default=0)
     content = models.IntegerField(blank=True,default=0)
