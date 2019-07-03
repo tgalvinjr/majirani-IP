@@ -19,13 +19,13 @@
 
 <div class="container headers">
   <h4 style="float:left;"><span class="bold">Uploaded Websites</h4>
-  <!-- <h4 style="float:right"><span><span class="bold">Mobile Excellence</span>  Recognized by Google</span></h4> -->
+
 </div>
 <div class="pages">
   <div class="row">
     {% for winner in winners %}
     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-      <div class="card" style="width: 40.2rem;">
+      <div class="card" style="width: 40.2rem; padding:0%">
         <img class="card-img-top img-responsive" src="{{winner.landing_page.url}}" alt="Card image cap" responsive>
         <div class="card-body">
           <a href="/site/{{winner.id}}" style="color:black;text-decoration:none;">
