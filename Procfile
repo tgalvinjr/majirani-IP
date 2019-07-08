@@ -1,1 +1,1 @@
-web: gunicorn awwward.wsgi
+web: gunicorn jamii.wsgi --log-file -

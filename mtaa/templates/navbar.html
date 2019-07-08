@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{% url 'home' %}">Mtaa</a>
+    </div>
+    <div class="col-sm-6 col-md-6"  style="margin-top:08px;">
+        {% if user.is_authenticated %}
+        <ul>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-expanded="false">Account
+                      <span class="caret"></span>
+                  </a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a href="{% url 'home' %}">Home</a>
+              </li>
+              <li>
+                <a href="/profile">Profile</a>
+              </li>
+              <!-- <li>
+                <a href="{% url 'addneighbourhood' %}">Add a Neighbourhood</a>
+              </li> -->
+              <li>
+                <a href="/accounts/password/change">Change Password</a>
+              </li>
+              <li>
+                <a href="/logout">Logout</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        {% else %}
+        <li>
+          <a class='btn btn-default' href="/accounts/login">Login</a>
+        </li>
+
+        {% endif %}
+      </div>
+      <div class="col-sm-4 col-md-4">
+
+ <form class="navbar-form" role="search" action="{%url 'search_hoods'%}">
+
+   <div class="input-group search">
+     <input type="text" class="form-control" placeholder="Search by neighborhood name" name="search" style="max-width:215px; height: 28px; background-color:rgb(250, 250, 250);line-height: 38px; text-align: center;">
+   </div>
+
+ </form>
+</div>
+
+  </div>
+</nav>
+</body>
+</html>
