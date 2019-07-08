@@ -36,7 +36,8 @@
             </div>
             {%if posts%}
             {%for post in posts%}
-            <p><strong>{{post.user.username}}: </strong> {{post.post}}</p>
+            <p>Post by {{post.user}}</p>
+            <p>Post Details: {{post.post}}</p>
 
             <hr><hr>
             {%endfor%}
