@@ -9,31 +9,33 @@
   <title>New Post</title>
   {{form.media}}
 
-{% block styles %} {% bootstrap_css %}
+  {% block styles %} {% bootstrap_css %}
   <link rel="stylesheet" href="#"> {% endblock %}
 
 </head>
 
 <body>
-    <br>
-    <br>
-    <div class="container">
-        <div class="well well-lg" style="text-align: center; font-size:200%; background-color:#16789f">Posts something that will be visible to everyone in the neighborhood</div>
-      <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-  <form  action="{%url 'new_post' neighborhood.id %}" method="post" enctype="multipart/form-data">
-    {%csrf_token%}
+  <br>
+  <br>
+  <div class="container">
+    <div class="well well-lg" style="text-align: center; font-size:200%; background-color:#16789f">Post something that
+      will be visible to everyone in the Neighborhood</div>
+      <br>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <form action="{%url 'new_post' neighborhood.id %}" method="post" enctype="multipart/form-data">
+          {%csrf_token%}
 
-    {% bootstrap_form form%}
-    <input type="submit" class="btn btn-primary btn-lg" value="Post">
-  </form>
-</div>
-<div class="col-md-3"></div>
-</div>
-</div>
+          {% bootstrap_form form%}
+          <input type="submit" class="btn btn-primary btn-lg" value="Post">
+        </form>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
 
-   {% block scripts %}
+  {% block scripts %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   {% bootstrap_javascript %} {% endblock %}
 
