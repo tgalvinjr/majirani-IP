@@ -69,7 +69,7 @@
 | Logout at will | Logout | True |
 
 ## Github Pages
-    The UI templates can be tested on [Heroku](https://alvoawards.herokuapp.com/home)
+    The UI templates can be tested on [Heroku](https://alvomajirani.herokuapp.com/home)
 
 ## Known Bugs
 None at the moment
