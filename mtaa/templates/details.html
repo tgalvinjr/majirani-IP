@@ -19,7 +19,8 @@
           </div>
           <footer class="w3-container">
             <br>
-            <button type="button" class="btn btn-primary" style="width: 50%">Neighbourhood DETAILS</button>
+            <a href="{% url 'all_info' neighbourhood.id %}">
+              <button type="button" class="btn btn-primary" style="width: 50%">Neighbourhood DETAILS</button></a>
             <a href="{% url 'home'%}">
               <button type="button" class="btn btn-danger" style="width: 48%">LEAVE Neighbourhood</button></a>
             <br>
@@ -38,17 +39,7 @@
         <p>Click <a class="img-thumbnail" href="{%url 'new_business' pk=neighbourhood.id %}"
             style="text-decoration:none;">here</a> to post a new business</p>
         <br>
-        <!-- {%if businesses%}
-      {%for business in businesses%}
-
-      <p><b>name:</b> {{business.name}}</p>
-      <p><b>description:</b> {{business.description}}</p>
-      <p><b>contact:</b> {{business.email}}</p>
-      <hr>
-      {%endfor%}
-      {%else%}
-      <p><b>no business at the moment</b></p>
-      {%endif%} -->
+       
       </div>
 
 
@@ -57,14 +48,8 @@
         <br>
         <p>Click<a class="img-thumbnail" href="{%url 'new_post' pk=neighbourhood.id %}" style="text-decoration:none;">
             here
-          </a> to something with your neighbour. </p>
-        <!-- {%if posts%}
-      {%for post in posts%}
-      <p><strong>{{post.user.username}}: </strong> {{post.post}}</p>
-      {%endfor%}
-      {%else%}
-      <p><b>no post by {{user.username}} at the moment</b></p>
-      {%endif%} -->
+          </a> to post in your neighbour. </p>
+       
         <br>
       </div>
     </div>

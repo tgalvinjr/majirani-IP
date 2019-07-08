@@ -2,6 +2,42 @@
 {%block content%}
 {% load bootstrap3 %} {% load staticfiles%}
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <br><br>
+            {%if businesses%}
+            {%for business in businesses%}
 
+            <p><b>name:</b> {{business.name}}</p>
+            <p><b>description:</b> {{business.description}}</p>
+            <p><b>contact:</b> {{business.email}}</p>
+            <hr>
+            {%endfor%}
+            {%else%}
+            <p><b>No businesses posted in {{ neighbourhood.name }} Estate at the moment</b></p>
+            <br>
+            <a href="{%url 'new_business' pk=neighbourhood.id %}"">
+                    <button type=" button" class="btn btn-primary" style="width: 100%">Be the first to
+                Post a Business</button></a>
+            {%endif%}
+        </div>
 
+        <div class="col-md-6">
+            <br><br>
+            {%if posts%}
+            {%for post in posts%}
+            <p><strong>{{post.user.username}}: </strong> {{post.post}}</p>
+            {%endfor%}
+            {%else%}
+            <p><b>There are no post(s) in {{ neighbourhood.name }} Estate at the moment</b></p>
+            <br>
+            <a href="{%url 'new_post' pk=neighbourhood.id %}"">
+                    <button type=" button" class="btn btn-primary" style="width: 100%">Be the first to
+                Post</button></a>
+
+            {%endif%}
+        </div>
+    </div>
+</div>
 {%endblock%}

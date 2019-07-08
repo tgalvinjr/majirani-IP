@@ -101,10 +101,10 @@ def new_post(request,pk):
     return render(request, 'new_post_form.html', {"form": post_form,'neighborhood':neighborhood})
 
 @login_required(login_url="/accounts/login/")
-def all_info(request):
-    businesses=Business.objects.filter(neighborhood=neighbourhood_id)
-    posts=Post.objects.filter(neighborhood=neighbourhood_id)
-    neighbourhood=Neighbourhood.objects.get(pk=neighbourhood_id)
+def all_info(request,id):
+    neighbourhood=Neighbourhood.objects.get(pk=id)
+    businesses=Business.objects.filter(neighborhood=neighbourhood.id)
+    posts=Post.objects.filter(neighborhood=neighbourhood.id)
     return render(request,'all_neigh_info.html',{'neighbourhood':neighbourhood,'businesses':businesses,'posts':posts})
 
 
