@@ -6,6 +6,7 @@ from django.views import generic
 
 
 # Create your views here.
+@login_required(login_url='/accounts/login/')
 def home(request):
     neighbourhoods = Neighbourhood.objects.all()
     return render(request, 'home.html',{"neighbourhoods":neighbourhoods,})
