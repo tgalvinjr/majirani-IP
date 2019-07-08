@@ -100,6 +100,17 @@ def new_post(request,pk):
         post_form = NewPostForm()
     return render(request, 'new_post_form.html', {"form": post_form,'neighborhood':neighborhood})
 
+@login_required(login_url="/accounts/login/")
+def all_info(request):
+    businesses=Business.objects.filter(neighborhood=neighbourhood_id)
+    posts=Post.objects.filter(neighborhood=neighbourhood_id)
+    neighbourhood=Neighbourhood.objects.get(pk=neighbourhood_id)
+    return render(request,'all_neigh_info.html',{'neighbourhood':neighbourhood,'businesses':businesses,'posts':posts})
+
+
+@login_required(login_url="/accounts/login/")
+def contacts(request):
+    return render(request, 'contacts.html')
 
 def search_hoods(request):
     if 'search' in request.GET and request.GET['search']:
