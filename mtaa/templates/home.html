@@ -11,13 +11,12 @@
 <div class="container">
   <div class="row">
     {% for neighbourhood in neighbourhoods %}
-    <div class="col-md-4" style="">
+    <div class="col-md-4">
 
       <div class="w3-card" style="width:100%; overflow:hidden;">
-        <header class="w3-container w3-light-grey">
-          <hr>
-          <h4>{{ neighbourhood.name }}</h4>
-          <p class='article-content'>location: {{ neighbourhood.location }}</p>
+        <header class="w3-container" style="background-color:#16789f">
+          <h4>Neighbourhood Name: {{ neighbourhood.name }}</h4>
+          <p class='article-content'>Location: {{ neighbourhood.location }}</p>
         </header>
         <br>
         <div class="w3-container">
@@ -25,7 +24,7 @@
         </div>
         <footer class="w3-container">
           <br>
-          <a href="{%url 'detail' neighbourhood.id %}" style="text-decoration:none;"><button class="btn btn-outline-success center-block"">Join</button></a>
+          <a href="{%url 'detail' neighbourhood.id %}" style="text-decoration:none;"><button class="btn btn-primary center-block"">Join Neighbourhood</button></a>
           <br>
         </footer>
       </div>
