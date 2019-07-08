@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar" style="background-color: #1d5b74;">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="{% url 'home' %}">Nyumba Kumi</a>
+      <a class="navbar-brand" style="color: whitesmoke" href="{% url 'home' %}">NYUMBA KUMI</a>
     </div>
     <div class="col-sm-6 col-md-6"  style="margin-top:08px;">
         {% if user.is_authenticated %}
-        <ul>
+        <ul style="list-style: none">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-expanded="false">Account
                       <span class="caret"></span>
