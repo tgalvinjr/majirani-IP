@@ -13,14 +13,14 @@
             {%for business in businesses%}
 
 
-            <p><b>Business Name:</b> {{business.name}}</p>
-            <p><b>Description:</b> {{business.description}}</p>
-            <p><b>Contact:</b> {{business.email}}</p>
+            <p style="color: black"><b>Business Name:</b> {{business.name}}</p>
+            <p style="color: black"><b>Description:</b> {{business.description}}</p>
+            <p style="color: black"><b>Contact:</b> {{business.email}}</p>
             <hr><hr>
         
             {%endfor%}
             {%else%}
-            <p><b>No businesses posted in {{ neighbourhood.name }} Estate at the moment</b></p>
+            <p style="color: black"><b>No businesses posted in {{ neighbourhood.name }} Estate at the moment</b></p>
             <br>
             <a href="{%url 'new_business' pk=neighbourhood.id %}"">
                     <button type=" button" class="btn btn-primary" style="width: 100%">Be the first to
@@ -36,8 +36,8 @@
             </div>
             {%if posts%}
             {%for post in posts%}
-            <p>Post by {{post.user}}</p>
-            <p>Post Details: {{post.post}}</p>
+            <p style="color: black">Post by {{post.user}}</p>
+            <p style="color: black">Post Details: {{post.post}}</p>
 
             <hr><hr>
             {%endfor%}
