@@ -1,26 +1,66 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div class="content-section text-center">
-<div class="media">
-  <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" alt="Image" width="152" height="152">
-  <div class="media-body">
-    <h2 class="account-heading">{{ user.username }}</h2>
-    <p class="text-secondary">{{ user.email }}</p>
-    <p class="text-secondary"><b>{{ user.profile.bio }}</b></p>
-  </div>
-</div>
-<br>
-<form method="POST" enctype="multipart/form-data">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <br>
+      <div style="width:100%;" class="w3-container card">
+
+        <div class="w3-card" style="width:100%;">
+          <header class="w3-container" style="background-color:#16789f">
+
+            <h4>Profile Details</h4>
+
+          </header>
+          <br>
+          <div class="w3-container">
+            <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" alt="Image" width="152"
+              height="152">
+            <div class="media-body">
+              <h2 class="account-heading">Name: {{ user.username }}</h2>
+              <p class="text-secondary">Email Address: {{ user.email }}</p>
+              <p class="text-secondary"><b>My Bio: {{ user.profile.bio }}</b></p>
+            </div>
+          </div>
+
+        </div>
+       
+        </footer>
+
+      </div>
+    </div>
+    <br>
+
+    <div class="col-md-6">
+
+      <div style="width:100%;" class="w3-container card">
+
+        <div class="w3-card" style="width:100%;">
+          <header class="w3-container" style="background-color:#16789f">
+
+            <h4> Update Profile Details</h4>
+
+          </header>
+          <br>
+
+          <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Profile Info</legend>
-                {{ u_form|crispy }}
-                {{ p_form|crispy }}
+              {{ u_form|crispy }}
+              {{ p_form|crispy }}
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Update Info</button>
+              <button class="btn btn-primary" style="width: 100%" type="submit">Update Info</button>
             </div>
-        </form>
+          </form>
+        
+
+        </footer>
+
+      </div>
+
+    </div>
+  </div>
 </div>
 {% endblock content %}
